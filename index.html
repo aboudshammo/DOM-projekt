@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/desert.css">
+    <script src="/js/dom.js"></script>
+    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?lang=html&amp%3Bskin=desert"></script>
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div class="text_container">
+
+        <div class="logo">
+            <h1>W4 schools</h1>
+        </div>
+
+        <div class="text">
+            <h2>Introduktion</h2>
+            <p>Dokumentobjektsmodellen (DOM) är data representationen för objekten av strukturen och innehållet i ett
+                dokument på webben. I den här guiden presenterar vi kort om hur DOM fungerar. Vi tittar på hur DOM
+                representerar ett HTML dokument i minnet och hur Api fungerar för att skapa webbinnehåll och
+                applikationer.</p>
+
+            <P>DOM är ett gränssnitt för HTML och säger till att program kan ändra strukturen, stil och innehåll i ett
+                HTML /CSS dokument. Dom består av noder och objekt och på så sätt kan programmeringsspråk som t.ex
+                javascript modifiera html/CSS dokumentet.
+                DOM kan repsenteras visuellt på det sättet :</P>
+
+            <img src="/img/pic_htmltree.png" alt="struktur html">
+
+            <p>Det som DOM gör att att den delar upp strukturen i form av objekt, alla element, text, attribute och
+                annat innehåll delas upp och kan sedan med hjälp av javascript modifieras. Javascript kan med hjälp av
+                DOM ändra : </p>
+
+            <ul>
+                <li>alla HTML-element på sidan</li>
+                <li>alla HTML-attribute på sidan</li>
+                <li>alla CSS-stilar på sidan</li>
+                <li>ta bort befintliga HTML-element och attribut</li>
+                <li>lägga till nya HTML-element och attribut</li>
+                <li>reagera på alla befintliga HTML-händelser på sidan</li>
+                <li>skapa nya HTML-händelser på sidan</li>
+            </ul>
+
+            <h2>Hur använder man DOM ?</h2>
+            <p>För att använda sig av DOM man måste känna till APIs alltså funktioner som man kan använda för att
+                programmera eller få tillgång till html eller css dokumentet, dessa funktioner kan variera med här är
+                några exempel : </p>
+
+            <ul>
+                <li>element.setAttribute()</li>
+                <li>element.getAttribute()</li>
+                <li>document.setElement()</li>
+                <li>document.getElement()</li>
+            </ul>
+
+            <p>Dessa funktioner kan användas för att returnera eller ändra element och attribut, det finns även massa
+                andra funktioner som kan ge mer flexibilitet och mer ändringar i html/css dokumentet. </p>
+
+            <h2>I Vilka sammanhang kan DOM och javascript användas ?</h2>
+
+    <pre class="prettyprint">
+
+    &lt;!DOCTYPE html>
+    &lt;html&gt;
+    &lt;body&gt;
+
+    &lt;h2&gt;My First Page&lt;/h2&gt;
+
+    &lt;p id="demo">&lt;/p&gt;
+
+    &lt;script&gt;
+    document.getElementById("demo").innerHTML = "Hello World!";
+    &lt;/script&gt;
+
+    &lt;/body&gt;
+    &lt;/html&gt;
+    </pre>
+            
+
+            <p>Detta är ett sammanhang där Javascript används med hjälp av DOM för att ersätta “Demo” med “Hello World” med
+                hjälp av funktionen document.getElement.Det finns massor med sammanhang där man kan använda sig av dom och javascript, i den här sidan har vi kodat
+                knappar som kan byta bakgrund och färg på text.</p>
+            </div>
+
+        <p>Välj bakgrund färg</p>
+        <select  onChange="setBodyAttr('background', this.options[this.selectedIndex].value, );">
+            <option value="linear-gradient(315deg, #b8c6db 0%, #f5f7fa 74%">Default</option>
+            <option value="blue">Blå</option>
+            <option value="green">Grön</option>
+            <option value="red">Röd</option>
+            <option value="white">Vit</option>
+        </select>
+        <p>Välj text färge</p>
+        <select onChange="setBodyAttr('color', this.options[this.selectedIndex].value, this.id);">
+            <option value="rgb(54, 50, 50)">Default</option>
+            <option value="blue">Blå</option>
+            <option value="green">Grön</option>
+            <option value="red">Röd</option>
+            <option value="white">Vit</option>
+        </select>
+        <p>Välj text storlek</p>
+        <select onChange="setBodyAttr('fontSize', this.options[this.selectedIndex].value, this.id);">
+            <option value="large">large</option>
+            <option value="x-large">x-large</option>
+            <option value="small">small</option>
+            <option value="x-small">small</option>
+        </select>
+
+
+
+
+
+    </div>
+
+</body>
+
+</html>
