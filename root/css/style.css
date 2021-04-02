@@ -5,6 +5,7 @@ body{
     background-image: linear-gradient(315deg, #b8c6db 0%, #f5f7fa 74%);
     color: rgb(54, 50, 50);
     font-size: large;
+    margin-bottom: 7%;
 }
 
 .text_container {
@@ -16,5 +17,36 @@ body{
     font-weight: bold;
     text-align: center;
   }
-  
 
+img {
+height: auto;
+width: 50%;
+}
+  
+pre{
+font-size: large;
+white-space: pre-wrap;
+}
+
+
+@media only screen and (max-width: 870px) {
+
+    body{
+        margin: 0%;
+        padding: 0%;
+        font-family: "Arimo";
+        background-image: linear-gradient(315deg, #b8c6db 0%, #f5f7fa 74%);
+        color: rgb(54, 50, 50);
+        font-size: x-large;
+        margin-bottom: 10%;
+    }
+
+    .text_container {
+        width: 90%;
+    }
+
+    img {
+        height: auto;
+        width: 100%;
+        }
+}
